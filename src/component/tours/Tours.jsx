@@ -16,5 +16,4 @@ const Tour = (props) => {
         })
     )
 }
-
 export default Tour;
