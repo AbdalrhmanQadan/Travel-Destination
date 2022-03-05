@@ -13,12 +13,12 @@ export const Li = style.li`
   `
   ;
 
-export const Lia = style.a`
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  `
-  ;
+export const Lia = {
+
+  display: "block",
+  color: "white",
+  padding: "14px 16px",
+
+}
+
 

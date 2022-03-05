@@ -1,8 +1,12 @@
-
+import { Link } from "react-router-dom";
 import { GridDiv, Button } from './StyleTours';
 
 const Tour = (props) => {
     console.log(props.data)
+    // let formatData = JSON.stringify(props.data);
+    //localStorage.setItem("city", formatData);
+
+
     return (
         props.data.map(datamap => {
             return (
@@ -12,9 +16,14 @@ const Tour = (props) => {
                         <h3>{datamap.price}</h3>
                         <h2>{datamap.name}</h2>
                     </GridDiv>
-                    <Button>Details</Button>
-
-
+                    <Link to={{
+                        pathname: `/details/:${datamap.id}`,
+                    }}><Button /*onClick={() => {
+                        let localId = JSON.stringify(datamap);
+                        localStorage.setItem("CityId", localId)
+                    }}*/>Details
+                        </Button>
+                    </Link>
                 </div>
             )
         })
